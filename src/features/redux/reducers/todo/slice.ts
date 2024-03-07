@@ -54,6 +54,9 @@ export const todoSlice = createSlice({
     setCategory: (state, action: PayloadAction<string>) => {
       state.currentCategory = action.payload;
     },
+    clearAllTodos: (state) => {
+      state.todos = [];
+    },
   },
 });
 
@@ -63,6 +66,12 @@ export const {
   selectUnCompletedTodo,
   selectCompletedTodoCount,
 } = todoSlice.selectors;
-export const { addTask, removeTask, completedTask, editTask, setCategory } =
-  todoSlice.actions;
+export const {
+  addTask,
+  removeTask,
+  completedTask,
+  editTask,
+  setCategory,
+  clearAllTodos,
+} = todoSlice.actions;
 export const todoReducer = todoSlice.reducer;

@@ -10,4 +10,18 @@
   p {
     color: #ffffff;
   }
+
+  .button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #f0f0f0;
+    }
+  }
 }
