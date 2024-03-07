@@ -22,13 +22,11 @@ const TodoInput: FC = () => {
             return
         }
 
-        const newTask: Todo = {
-            id: crypto.randomUUID(),
-            title: inputTaskValue,
-            isCompleted: false,
-        }
-
-        dispatch(addTask(newTask))
+        dispatch(addTask({
+                id: crypto.randomUUID(),
+                title: inputTaskValue,
+                isCompleted: false,
+            }))
         setInputTaskValue("")
     }
 
