@@ -43,11 +43,7 @@ const TodoInput: FC = () => {
         type="text"
         placeholder={"Enter your task here..."}
       />
-      <button
-        className={styles.form__button}
-        type="submit"
-        disabled={!inputTaskValue || !inputTaskValue.trim()}
-      >
+      <button className={styles.form__button} type="submit">
         Add
       </button>
     </form>
