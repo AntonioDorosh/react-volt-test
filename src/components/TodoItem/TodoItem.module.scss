@@ -1,0 +1,77 @@
+.list {
+  &__item {
+    display: flex;
+    align-items: center;
+    max-width: 500px;
+    padding: 1rem;
+    margin: 0.5rem auto;
+    border-radius: 5px;
+    background-color: #D0D4F0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+
+    &__text {
+      font-size: 1.5rem;
+
+      &active {
+        text-decoration: line-through;
+        flex: 1;
+        font-size: 1.5rem;
+        color: #ffffff;
+      }
+    }
+
+
+    &__button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background-color: #fff;
+      color: #663399;
+      cursor: pointer;
+      transition: opacity 0.5s ease-in-out;
+      font-weight: 700;
+
+      &__container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex: 1;
+        justify-content: flex-end;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    &__input[type="checkbox"] {
+      appearance: none;
+      background-color: #fff;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      width: 1.15em;
+      height: 1.15em;
+      border: 0.15em solid #663399;
+      border-radius: 0.15em;
+      transform: translateY(-0.075em);
+      display: grid;
+      place-content: center;
+      cursor: pointer;
+
+      &:before {
+        content: "";
+        width: 0.65em;
+        height: 0.65em;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        box-shadow: inset 1em 1em #663399;
+      }
+
+      &:checked:before {
+        transform: scale(1);
+      }
+    }
+  }
+}
